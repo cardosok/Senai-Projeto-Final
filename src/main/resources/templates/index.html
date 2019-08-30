@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <head>
+        <title> Listagem de produtos</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Listagem de Produtos</h1>
+
+            <a class="btn btn-primary" style="margin-bottom: 10px" href="/new">Cadastrar</a>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Brand</th>
+                        <th>Made in</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <th:block th:each="product : ${listProducts}">
+                    <tr>
+                        <td th:text="${product.nome}">Produto</td>
+                        <td th:text="${product.brand}"> Marca</td>
+                        <td th:text="${product.madeIn}"> Origem</td>
+                        <td th:text="${product.price}"> Preco</td>
+                        <td>
+                            <a th:href="@{'/edit/' + ${product.id}}">Editar</a>
+                            <a th:href="@{'/delete/'+ ${product.id}}">Excluir</a>
+                        </td>
+                    </tr>
+                </th:block>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

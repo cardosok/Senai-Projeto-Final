@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Edit Product</title>
+	</head>
+	<body>
+		<form action="/save" method="post">
+		<div>
+		  Id:<br/>
+		  <input type="text" th:value="${product.id}" name="id" readonly="readonly"><br>		
+		</div>
+		<div>
+		  name:<br/>
+		  <input type="text" th:value="${product.nome}" name="nome"><br>		
+		</div>
+		<div>
+		  Brand:<br/>
+		  <input type="text" th:value="${product.nome}" name="brand">
+		</div>
+		<div>
+		  Made In:<br/>
+		  <input type="text" th:value="${product.nome}" name="madeIn">
+		</div>
+		<div>
+		  Price:<br/>
+		  <input type="number"  th:value="${product.price}" name="price">
+		</div>
+		<br/>		  
+		  <input type="submit" value="Submit">		  
+		</form>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Create a New Product</title>
+	</head>
+	<body>
+		<form action="/save" method="post">
+		<div>
+		  name:<br/>
+		  <input type="text" name="nome"><br>		
+		</div>
+		<div>
+		  Brand:<br/>
+		  <input type="text" name="brand">
+		</div>
+		<div>
+		  Made In:<br/>
+		  <input type="text" name="madeIn">
+		</div>
+		<div>
+		  Price:<br/>
+		  <input type="number" name="price">
+		</div>
+		<br/>		  
+		  <input type="submit" value="Submit">		  
+		</form>
+	</body>
+</html>
